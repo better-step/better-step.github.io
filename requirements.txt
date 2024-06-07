@@ -22,3 +22,5 @@ mkdocstrings-crystal
 mkdocstrings-python-legacy
 pygments
 pymdown-extensions
+mkdocs-include-markdown-plugin==4.0.4
+mkdocs-material-extensions
