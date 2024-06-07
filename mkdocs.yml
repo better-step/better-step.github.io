@@ -1,0 +1,105 @@
+site_name: A Better Step
+site_url: "https://better-step.github.io"
+repo_name: "better-step"
+repo_url: "https://github.com/better-step/better-step.github.io"
+site_description: "A Better Step"
+copyright: Copyright &copy; 2018–2024 ABS Group; MIT License
+# strict: true
+docs_dir: "docs"
+remote_branch: "main"
+theme:
+  name: material
+  custom_dir: 'docs/theme'
+  favicon: "img/xxx.ico"
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: "light green"
+      accent: "green"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: "green"
+      accent: "green"
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+custom_dir: "docs/overrides"
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: "https://better-step.github.io"
+extra_css:
+  - theme/extra.css
+markdown_extensions:
+  - codehilite
+  - footnotes
+  - admonition
+  - toc:
+      permalink: true
+  - markdown.extensions.smarty
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      repo_url_shortener: true
+      user: abs
+      repo: abs
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.extra
+  - pymdownx.tabbed:
+      alternate_style: true
+plugins:
+  - git-revision-date
+  - search
+  - mkdocs-jupyter:
+          include_source: True
+          ignore_h1_titles: True
+          execute: True
+          allow_errors: false
+          ignore: ["conf.py"]
+          execute_ignore: ["*ignore.ipynb"]
+
+  - include-markdown
+extra_javascript:
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+nav:
+    - Home: index.md
+    - Installation: installation.md
+    - Usage: usage.md
+    - Contributing: contributing.md
+    - FAQ: faq.md
+    - Changelog: changelog.md
+    - Examples:
+        - examples/intro.ipynb
+    - API Reference:
+          - abs module: abs.md
+          - common module: common.md
