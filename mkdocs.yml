@@ -9,7 +9,7 @@ docs_dir: "docs"
 remote_branch: "main"
 theme:
   name: material
-  custom_dir: 'docs/theme'
+  custom_dir: "docs/overrides"
   favicon: "img/xxx.ico"
   icon:
     logo: material/library
@@ -36,7 +36,6 @@ theme:
     - navigation.expand
     - search.suggest
     - search.highlight
-custom_dir: "docs/overrides"
 extra:
   social:
     - icon: fontawesome/brands/github
