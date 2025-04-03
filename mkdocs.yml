@@ -91,14 +91,19 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 nav:
-    - Home: index.md
-    - Installation: installation.md
-    - Usage: usage.md
-    - Contributing: contributing.md
-    - FAQ: faq.md
-    - Changelog: changelog.md
-    - Examples:
-        - examples/intro.ipynb
-    - API Reference:
-          - abs module: abs.md
-          - common module: common.md
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - API:
+      - Overview: hdf5_mesh_sampler.md
+      - Geometry: api/geometry.md
+      - Topology: api/topology.md
+      - Sampling: api/sampling.md
+      - Visualization: api/visualization.md
+  - Examples: examples/intro.ipynb
+  - FAQ: faq.md
+  - Changelog: changelog.md
+  - Contributing: contributing.md
+  - Authors: AUTHORS.rst
+
+          
