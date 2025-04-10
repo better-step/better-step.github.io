@@ -95,7 +95,7 @@ nav:
   - Installation: installation.md
   - Usage: usage.md
   - API:
-      - Overview: hdf5_mesh_sampler.md
+      - Overview: api_overview.md
       - Geometry: api/geometry.md
       - Topology: api/topology.md
       - Sampling: api/sampling.md
