@@ -99,7 +99,6 @@ nav:
       - Geometry: api/geometry.md
       - Topology: api/topology.md
       - Sampling: api/sampling.md
-      - Visualization: api/visualization.md
   - Examples: examples/intro.ipynb
   - Changelog: changelog.md
   - Contributing: contributing.md
