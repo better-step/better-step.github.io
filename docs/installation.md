@@ -13,7 +13,6 @@ This guide covers installation in a clean Python environment and a quick sanity 
 ## Requirements
 
 - **Python 3.7+**
-- A working C/C++ toolchain may be required on some systems if dependencies need to build from source.
 - (Recommended) A virtual environment to keep dependencies isolated.
 
 > Note: HDF5 support is provided through Python dependencies (e.g., `h5py`) and will be installed automatically as needed.
