@@ -1,7 +1,7 @@
 site_name: A Better Step
 site_url: "https://better-step.github.io"
-repo_name: "better-step"
-repo_url: "https://github.com/better-step/better-step.github.io"
+repo_name: "abs"
+repo_url: "https://github.com/better-step/abs.git"
 site_description: "A Better Step"
 copyright: Copyright &copy; 2018–2024 ABS Group; MIT License
 # strict: true
