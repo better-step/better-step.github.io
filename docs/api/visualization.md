@@ -1,4 +1,4 @@
-# Visualization Module
+<!-- # Visualization Module
 
 Simple tools for rendering CAD shapes and sampling results.
 
@@ -10,4 +10,4 @@ from hdf5_mesh_sampler.visualization.visualize import plot_shape
 plot_shape(shape)
 ```
 
-> Auto-generated API reference appears here via mkdocstrings.
+> Auto-generated API reference appears here via mkdocstrings. -->
