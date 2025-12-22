@@ -101,7 +101,6 @@ nav:
       - Sampling: api/sampling.md
       - Visualization: api/visualization.md
   - Examples: examples/intro.ipynb
-  - FAQ: faq.md
   - Changelog: changelog.md
   - Contributing: contributing.md
   - Authors: AUTHORS.rst
