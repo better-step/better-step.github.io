@@ -1,4 +1,5 @@
 # Better Step
+[![PyPI version](https://img.shields.io/pypi/v/abs-hdf5.svg)](https://pypi.org/project/abs-hdf5/)
 ## Open‑source CAD Data Conversion & Sampling
 
 Better Step is designed to unlock CAD data for research and industry. By converting proprietary STEP files into an open HDF5-based format, Better Step enables efficient processing on large-scale computing clusters, eliminating the need for expensive proprietary licenses.
