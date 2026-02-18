@@ -22,31 +22,44 @@ meshes = read_meshes("data/sample_hdf5/Box.hdf5")
 
 ### Sampling Geometry
 
-Use `sample_parts` to draw samples from one or more CAD parts. In addition to the sampled points `P`, the function returns `S`, which contains per-sample auxiliary data. The behavior is controlled by `lambda_func`: an arbitrary user-defined function that is evaluated during sampling to compute whatever additional attributes you want (e.g., surface normals, curvature features, IDs, etc.).
+You can use `sample_parts` to draw samples from one or more CAD parts.
+
+The function returns:
+
+- **`P`** – the sampled 3D points  
+- **`S`** – per-sample auxiliary data computed during sampling  
+
+The behavior of `sample_parts` is controlled by two user-defined functions:
+
+- `face_func(face, points)` – evaluated for samples drawn on faces  
+- `edge_func(edge, points)` – evaluated for samples drawn on edges  
+
+These functions allow you to compute arbitrary per-sample attributes such as:
+
+- Surface normals  
+- Curvature features  
+- Face/edge IDs  
+- Custom geometric descriptors  
+
+Each function receives:
+
+- The geometric entity (`face` or `edge`)  
+- The sampled points on that entity  
+
+and must return the auxiliary data associated with those samples.
 
 ```python
 from abs.part_processor import sample_parts
 
-def lambda_func(part, topo, points):
-    if topo.is_face():
-        return topo.normal(points)
-    else:
-        return None
+def face_func(face, points):
+    return face.normal(points)
 
-P, S = sample_parts(parts, num_samples, lambda_func)
+P, S = sample_parts(parts, num_samples, face_func)
 print("Sampled points:", P)
 ```
-
-<!-- ### Using the CLI
-
-```bash
-python -m hdf5_mesh_sampler.cli --input data/sample_hdf5/Box.hdf5 --output output_directory
-``` -->
 
 ## Advanced Use Cases
 
 - **Learning Normals:** Use sample data to train or validate normal estimation.
 - **Detecting Sharp Features:** Analyze curves to detect geometric edges.
 - **Labeling Geometry:** Assign labels based on detected primitive types.
-
-> See the example notebooks in the Examples section for more details.
